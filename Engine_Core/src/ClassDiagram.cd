@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Animation">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <Members>
+      <Method Name="~Animation" Hidden="true" />
+      <Method Name="AddClip" Hidden="true" />
+      <Method Name="Animation" Hidden="true" />
+      <Field Name="gpuAnimation" Hidden="true" />
+      <Field Name="LOCAL_COMPUTE_THREAD_COUNT" Hidden="true" />
+      <Field Name="name" Hidden="true" />
+      <Field Name="pActiveClip" Hidden="true" />
+      <Field Name="pad" Hidden="true" />
+      <Field Name="pBit_ssbo" Hidden="true" />
+      <Field Name="pFrameB_ssbo" Hidden="true" />
+      <Field Name="pFrameC_ssbo" Hidden="true" />
+      <Field Name="pFrameD_ssbo" Hidden="true" />
+      <Field Name="pNext" Hidden="true" />
+      <Field Name="pPrev" Hidden="true" />
+      <Method Name="privProcessCPUanim" Hidden="true" />
+      <Method Name="privProcessGPUanim" Hidden="true" />
+      <Method Name="Remove" Hidden="true" />
+      <Method Name="SetSpeed" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="Animation::Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Animation.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQQAAQACCAAEAAAAjQAIBBAAEYEsAQAgAgABAAABkAE=</HashCode>
+      <FileName>Animation.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pClipHead" />
+      <Field Name="pSkeleton" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AnimationManager">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgYAAAAAACAAAAAAACAAAIAAAAAKAEAAAAAAAAAYAAA=</HashCode>
+      <FileName>AnimationManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pHead" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Clip" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAABAAAAIAEAAAAAAEAIAAAAAA=</HashCode>
+      <FileName>Clip.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skeleton" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQgAAAAAAAQAAAAMCIAAAQAAIAkAAIACAIAAQABgAE=</HashCode>
+      <FileName>Skeleton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkeletonManager">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="~SkeletonManager" Hidden="true" />
+      <Method Name="Add" Hidden="true" />
+      <Method Name="Create" Hidden="true" />
+      <Method Name="Find" Hidden="true" />
+      <Method Name="privCreate" Hidden="true" />
+      <Method Name="privInstance" Hidden="true" />
+      <Method Name="SkeletonManager" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ggYAIAAAAAAAAAAAAAAAAAAAAAAIAEAAAAAAAAA4AAA=</HashCode>
+      <FileName>SkeletonManager.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pHead" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GraphicsObject_ConstColorSkin">
+    <Position X="7.75" Y="6.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAABAAAABAAAgAAAAAAAAAgAAAAEAAAAAAABAAAEAA=</HashCode>
+      <FileName>GraphicsObject_ConstColorSkin.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="p_skeleton" />
+      <Field Name="p_anim" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameObject">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <Members>
+      <Method Name="draw" Hidden="true" />
+      <Method Name="GameObject" Hidden="true" />
+      <Method Name="getWorld" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="Process" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="GameObject::Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>GameObject.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAAAAAAEAAAgIAAAAAAAAAAAEQCAAgAIoAAAA=</HashCode>
+      <FileName>GameObject.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pGraphicsObject" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GraphicsObject">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <Members>
+      <Method Name="GetModel" Hidden="true" />
+      <Method Name="GetWorld" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="GraphicsObject::Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>GraphicsObject.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACABAAAAAIAAAgAAAAEAAQAABABEAgAAAA=</HashCode>
+      <FileName>GraphicsObject.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Model">
+    <Position X="10.25" Y="1" Width="1.5" />
+    <Members>
+      <Method Name="~Model" Hidden="true" />
+      <Method Name="IsCWW" Hidden="true" />
+      <Method Name="IsRenderSphere" Hidden="true" />
+      <Method Name="Model" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Field Name="pad" Hidden="true" />
+      <Method Name="privCreateVAO" Hidden="true" />
+      <Field Name="psphere" Hidden="true" />
+      <Field Name="RenderSphere" Hidden="true" />
+      <Method Name="setIsCWW" Hidden="true" />
+      <Method Name="setRenderSphere" Hidden="true" />
+      <Field Name="vao" Hidden="true" />
+      <Field Name="vbo" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="Model::Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAAKECAAAAAkAAgIAAAAAAAAAFAAAQABwgAAAAAAE=</HashCode>
+      <FileName>Model.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
