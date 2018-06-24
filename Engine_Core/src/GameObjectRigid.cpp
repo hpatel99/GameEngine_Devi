@@ -36,10 +36,7 @@ void GameObjectRigid::Update( Time  )
 {
 	Matrix T = Matrix( TRANS, *this->pPos);
 	Matrix S = Matrix( SCALE, *this->pScale);
-
-	static float angle = 0.0f;
-	///angle += 0.03f;
-	Matrix R = Matrix(ROT_Z, angle);
+	Matrix R = Matrix(ROT_X, this->rotX)*Matrix(ROT_Y, this->rotY)*Matrix(ROT_Z, this->rotZ);
 
 	Matrix M = S * R * T;
 
@@ -69,12 +66,5 @@ void GameObjectRigid::rotate(Rot3AxisType intype,const  float angle1,const float
 	default:
 		break;
 	}
-
-	Matrix Scale(SCALE, *this->pScale);
-	Matrix TransA(TRANS, *this->pPos);
-	Matrix RotX(ROT_X, this->rotX);
-	Matrix RotY(ROT_Y, this->rotY);
-	Matrix RotZ(ROT_Z, this->rotZ);
-	*this->pWorld = Scale * RotX * RotY * RotZ * TransA;
 
 }

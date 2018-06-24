@@ -8,6 +8,7 @@
 #include "Structs.h"
 #include "SkeletonManager.h"
 #include "Trace.h"
+#include "Matrix.h"
 
 SkeletonLoader * SkeletonLoader::pSkeletonImporter;
 
@@ -59,7 +60,7 @@ void SkeletonLoader::Add(const char * const pModelFileName,float size, const cha
 	p_skeleton->pRigid = new GameObjectRigid(pnullgraphicc);
 	
 	p_skeleton->pRigid->setScale(Vect(size, size, size));
-	//p_skeleton->pRigid->setPos(Vect(100, 100, 10));
+	p_skeleton->pRigid->setPos(Vect(0.0f, 0.0f, 0.0f));
 	GameObjectManager::Add(p_skeleton->pRigid, GameObjectManager::GetRoot());
 	
 	//load skelton

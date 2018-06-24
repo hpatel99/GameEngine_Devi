@@ -24,6 +24,7 @@
 #include "ClipLoader.h"
 #include "GraphicsObject_ConstColorSkin.h"
 #include "GameObjectRigid.h"
+#include "Vect.h"
 
 
 //hack
@@ -126,7 +127,7 @@ void Game::LoadContent()
 	//SkeletonLoader::Add("teddy.skel", 10.0f, "BoneInverseteddy.bones", Skeleton::Name::TEDDY_SKELETON_WALK);
 	Skeleton *pPunch_Skeleton = SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH);
 	pPunch_Skeleton->pRigid->setPos(Vect(0.0f, 0.0f, 0.0f));
-	pPunch_Skeleton->pRigid->rotate(Rot3AxisType::ROT_XYZ, 1.5708f, 1.5708f, 1.5708f);
+	pPunch_Skeleton->pRigid->rotate(Rot3AxisType::ROT_XYZ, 0.0f, 1.5708f, 0.0f);
 	////////////////////////////////////////////////////////////////////////
 	//           Animation Creation and adding to manager			     //
 	///////////////////////////////////////////////////////////////////////
