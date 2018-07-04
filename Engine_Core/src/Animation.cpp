@@ -18,7 +18,7 @@
 
 Animation::Animation(Skeleton::Name inSkelName_, Animation::Name inName_,bool GpuAnimation)
 {
-	this->speed = 0.1f;
+	this->speed = 0.05f;			// can varry to speed or decrease the speed
 	this->name = inName_;
 	this->pSkeleton = SkeletonManager::Find(inSkelName_); 
 	this->pNext = nullptr;

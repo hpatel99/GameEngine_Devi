@@ -9,6 +9,9 @@
 #include "GraphicsObjectManager.h"
 #include "GraphicsObject_PointLight.h"
 #include "AnimationManager.h"
+#include "SkeletonManager.h"
+#include "Trace.h"
+#include "Vect.h"
 
 
 void KeyboardTest()
@@ -120,11 +123,11 @@ void KeyboardTest()
 
 		CameraManger::GetActive()->MoveBackward(movespeed);
 	}//tilt
-	if (pKey->GetKeyState(AZUL_KEY::KEY_SPACE))					//tilt  //tilt
-	{
+	//if (pKey->GetKeyState(AZUL_KEY::KEY_SPACE))					//tilt  //tilt
+	//{
 
-		CameraManger::GetActive()->PedestalUp(movespeed);
-	}
+	//	CameraManger::GetActive()->PedestalUp(movespeed);
+	//}
 	if (pKey->GetKeyState(AZUL_KEY::KEY_C))					//tilt  //tilt
 	{ 
 
@@ -199,6 +202,12 @@ void KeyboardTest()
 	{
 		GameObjectManager::HotSwap();
 	}
+	if (pKey->GetKeyState(AZUL_KEY::KEY_SPACE))
+	{
+		/*Skeleton* pPunchSkeleton = SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH);
+		pPunchSkeleton->pRigid->rotX += 0.01f;
+		Trace::out(" Rot X = %f\n", pPunchSkeleton->pRigid->rotX);*/
+	}
 }
 
 void MouseTest()
@@ -246,4 +255,5 @@ void MouseTest()
 
 		CameraManger::GetActive()->setHelper(up, tar, pos);
 	}
+	
 }

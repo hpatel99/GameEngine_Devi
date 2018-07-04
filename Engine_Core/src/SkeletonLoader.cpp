@@ -60,7 +60,8 @@ void SkeletonLoader::Add(const char * const pModelFileName,float size, const cha
 	p_skeleton->pRigid = new GameObjectRigid(pnullgraphicc);
 	
 	p_skeleton->pRigid->setScale(Vect(size, size, size));
-	p_skeleton->pRigid->setPos(Vect(0.0f, 0.0f, 0.0f));
+	p_skeleton->pRigid->setPos(Vect(0.0f, -0.0f, -0.0f));
+	//p_skeleton->pRigid->rotate(Rot3AxisType::ROT_XYZ, -1.5708f, 0.0f, 0.00f);
 	GameObjectManager::Add(p_skeleton->pRigid, GameObjectManager::GetRoot());
 	
 	//load skelton
