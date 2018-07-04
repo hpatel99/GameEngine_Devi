@@ -1,0 +1,254 @@
+Autodesk FBX SDK version 2018.1.1 Release (246450)
+
+
+File: 2Bone.fbx
+
+FBX file format version for this FBX SDK is 7.5.0
+FBX file format version for file '2Bone.fbx' is 6.0.0
+
+Animation Stack Information
+    Number of Animation Stacks: 1
+    Current Animation Stack: "Take 001"
+
+    Animation Stack 0
+         Name: "Take 001"
+         Description: ""
+         Import Name: "Take 001"
+         Import State: true
+
+
+
+--------------------
+Meta-Data
+--------------------
+
+    Title: 
+    Subject: 
+    Author: 
+    Keywords: 
+    Revision: 
+    Comment: 
+
+
+---------------------
+Global Light Settings
+---------------------
+
+Ambient Color: 0.000000 (red), 0.000000 (green), 0.000000 (blue)
+
+
+
+----------------------
+Global Camera Settings
+----------------------
+
+Default Camera: Producer Perspective
+
+
+
+--------------------
+Global Time Settings
+--------------------
+
+Time Mode : 30 fps
+Timeline default timespan: 
+     Start: 0
+     Stop : 30
+
+
+
+---------
+Hierarchy
+---------
+
+Box01
+Bone01
+     Bone02
+
+
+------------
+Node Content
+------------
+
+    Pivot Information
+        Pivot State: Reference
+        Pre-Rotation: -90.000000 0.000000 0.000000
+        Post-Rotation: 0.000000 0.000000 0.000000
+        Rotation Pivot: 0.000000 0.000000 0.000000
+        Rotation Offset: 0.000000 0.000000 0.000000
+        Scaling Pivot: 0.000000 0.000000 0.000000
+        Scaling Offset: 0.000000 0.000000 0.000000
+    Transformation Propagation
+        Rotation Space: Euler XYZ
+        Use the Rotation Space for Limit specification only: No
+        Transformation Inheritance: RSrs
+    Geometric Transformations
+        Translation: 57.129379 0.000000 -7.021560
+        Rotation:    0.000000 0.000000 0.000000
+        Scaling:     1.000000 1.000000 1.000000
+Skeleton Name: Bone01
+    Type: Limb Node
+    Limb Node Size: 803.782471
+    Color: 0.800000 (red), 0.800000 (green), 0.800000 (blue)
+    Pivot Information
+        Pivot State: Reference
+        Pre-Rotation: -90.000000 0.000000 0.000000
+        Post-Rotation: 0.000000 0.000000 0.000000
+        Rotation Pivot: 0.000000 0.000000 0.000000
+        Rotation Offset: 0.000000 0.000000 0.000000
+        Scaling Pivot: 0.000000 0.000000 0.000000
+        Scaling Offset: 0.000000 0.000000 0.000000
+    Transformation Propagation
+        Rotation Space: Euler XYZ
+        Use the Rotation Space for Limit specification only: No
+        Transformation Inheritance: RSrs
+    Geometric Transformations
+        Translation: 0.000000 0.000000 0.000000
+        Rotation:    0.000000 0.000000 0.000000
+        Scaling:     1.000000 1.000000 1.000000
+Skeleton Name: Bone02
+    Type: Limb Node
+    Limb Node Size: 803.782471
+    Color: 0.800000 (red), 0.800000 (green), 0.800000 (blue)
+    Pivot Information
+        Pivot State: Reference
+        Pre-Rotation: 0.000000 0.000000 0.000000
+        Post-Rotation: 0.000000 0.000000 0.000000
+        Rotation Pivot: 0.000000 0.000000 0.000000
+        Rotation Offset: 0.000000 0.000000 0.000000
+        Scaling Pivot: 0.000000 0.000000 0.000000
+        Scaling Offset: 0.000000 0.000000 0.000000
+    Transformation Propagation
+        Rotation Space: Euler XYZ
+        Use the Rotation Space for Limit specification only: No
+        Transformation Inheritance: RSrs
+    Geometric Transformations
+        Translation: 0.000000 0.000000 0.000000
+        Rotation:    0.000000 0.000000 0.000000
+        Scaling:     1.000000 1.000000 1.000000
+
+
+----
+Pose
+----
+
+Pose Name: BIND_POSES
+    Is a bind pose: true
+    Number of items in the pose: 3
+
+    Item name: Box01
+    Matrix value: 
+           1.0000    0.0000    0.0000    0.0000
+           0.0000    0.0000   -1.0000    0.0000
+           0.0000    1.0000    0.0000    0.0000
+        -120.0000    0.0000    0.0000    1.0000
+
+    Item name: Bone01
+    Matrix value: 
+           1.0000    0.0001    0.0000    0.0000
+          -0.0001    1.0000   -0.0000    0.0000
+          -0.0000    0.0000    1.0000    0.0000
+        -120.0000    0.0000    0.0000    1.0000
+
+    Item name: Bone02
+    Matrix value: 
+           1.0000    0.0001   -0.0000    0.0000
+          -0.0001    1.0000   -0.0000    0.0000
+           0.0000    0.0000    1.0000    0.0000
+          -5.1739    0.0104    0.0000    1.0000
+
+
+
+---------
+Animation
+---------
+
+Animation Stack Name: Take 001
+   contains 1 Animation Layer
+
+AnimLayer 0
+     Node Name: RootNode
+
+My time ----- Key Time: 0 timeMS: 0
+
+                    Trans: 0.000000, 0.000000, 0.000000
+                      Rot: 0.000000, -0.000000, 0.000000
+                    Scale: 1.000000, 1.000000, 1.000000
+
+My time ----- Key Time: 35 timeMS: 1166
+
+                    Trans: 0.000000, 0.000000, 0.000000
+                      Rot: 0.000000, -0.000000, 0.000000
+                    Scale: 1.000000, 1.000000, 1.000000
+
+My time ----- Key Time: 70 timeMS: 2333
+
+                    Trans: 0.000000, 0.000000, 0.000000
+                      Rot: 0.000000, -0.000000, 0.000000
+                    Scale: 1.000000, 1.000000, 1.000000
+
+
+     Node Name: Box01
+
+My time ----- Key Time: 0 timeMS: 0
+
+                    Trans: -120.000000, 0.000000, 0.000000
+                      Rot: -90.000000, -0.000000, 0.000000
+                    Scale: 1.000000, 1.000000, 1.000000
+
+My time ----- Key Time: 35 timeMS: 1166
+
+                    Trans: -120.000000, 0.000000, 0.000000
+                      Rot: -90.000000, -0.000000, 0.000000
+                    Scale: 1.000000, 1.000000, 1.000000
+
+My time ----- Key Time: 70 timeMS: 2333
+
+                    Trans: -120.000000, 0.000000, 0.000000
+                      Rot: -90.000000, -0.000000, 0.000000
+                    Scale: 1.000000, 1.000000, 1.000000
+
+
+     Node Name: Bone01
+
+My time ----- Key Time: 0 timeMS: 0
+
+                    Trans: -113.894875, 0.000000, 0.000000
+                      Rot: -0.000000, -0.000000, 0.005445
+                    Scale: 1.000000, 1.000000, 1.000000
+
+My time ----- Key Time: 35 timeMS: 1166
+
+                    Trans: -69.141525, 0.000000, 0.000000
+                      Rot: -0.000000, -0.000000, 35.000000
+                    Scale: 1.000000, 1.000000, 1.000000
+
+My time ----- Key Time: 70 timeMS: 2333
+
+                    Trans: -39.924347, 0.000000, 0.000000
+                      Rot: 0.000000, -0.000000, 0.000003
+                    Scale: 1.000000, 1.000000, 1.000000
+
+
+     Node Name: Bone02
+
+My time ----- Key Time: 0 timeMS: 0
+
+                    Trans: 114.826065, -0.000016, 0.000000
+                      Rot: -0.000000, 0.000000, -0.005444
+                    Scale: 1.000000, 1.000000, 1.000000
+
+My time ----- Key Time: 35 timeMS: 1166
+
+                    Trans: 114.826065, -0.000016, 0.000000
+                      Rot: -0.000000, 0.000000, -69.954391
+                    Scale: 1.000000, 1.000000, 1.000000
+
+My time ----- Key Time: 70 timeMS: 2333
+
+                    Trans: 114.826065, -0.000016, 0.000000
+                      Rot: 0.000000, 0.000000, -0.000000
+                    Scale: 1.000000, 1.000000, 1.000000
+
+
+Program Success!
