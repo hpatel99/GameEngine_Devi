@@ -14,9 +14,11 @@ Clip* ClipLoader::Add(const char * const pModelFileName, Clip::Name inname)
 	File::Handle fh;
 	File::Error ferror;
 	ferror = File::Open(fh, pModelFileName, File::READ);		//opening for reading
+	assert(ferror == File::SUCCESS);
 	unsigned int   sizeoffile = GetSize(pModelFileName);						//getting size of spu
 	unsigned char* pMainBuffer = new unsigned char[sizeoffile];	//whole size
 	ferror = File::Read(fh, pMainBuffer, sizeoffile);	//read all to buffer
+	assert(ferror == File::SUCCESS);
 	ClipHeader clphdr;
 	
 	memcpy_s(&clphdr, sizeof(ClipHeader), pMainBuffer, sizeof(ClipHeader));
