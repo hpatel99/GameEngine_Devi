@@ -12,6 +12,10 @@
 GameObjectRigid::GameObjectRigid( GraphicsObject  *graphicsObject )
 	: GameObject(graphicsObject)
 {
+	/*this->rotX = 0.0f;
+	this->rotY = 0.0f;
+	this->rotZ = 0.0f;*/
+
 	this->pScale = new Vect(1.0f, 1.0f, 1.0f);
 	assert(this->pScale);
 

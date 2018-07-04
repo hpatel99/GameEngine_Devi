@@ -35,5 +35,6 @@ void main()
 
 				gl_Position = proj_matrix *view_matrix *Pos;
 				//gl_Position = proj_matrix *view_matrix * world_matrix * vVert;
-				vs_out.color = vWeights;
+				vs_out.color = vVert;					//want some cool colors but will add later on
+
 }

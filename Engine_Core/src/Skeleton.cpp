@@ -7,6 +7,7 @@
 #include "ModelManager.h"
 #include "ShaderObjectManager.h"
 #include "GameObjectRigid.h"
+#include "Matrix.h"
 
 
 Skeleton::Skeleton(int num, Skeleton::Name inname)

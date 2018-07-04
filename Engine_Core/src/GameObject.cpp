@@ -126,39 +126,5 @@ GameObject::~GameObject()
 void GameObject::Update( Time currentTime )
 {	
 	UNUSED_VAR(currentTime);
-	// Get the parent world
-	Matrix M(IDENTITY);
 
-	*this->pWorld = M;
-
-
-	//if (this->pGraphicsObject->name != GraphicsObject::Name::SKYBOX_TEXTURE)
-	//{
-	//	UNUSED_VAR(currentTime);
-	//	
-	//	this->rotY += 0.0f;
-	//	this->rotZ += 0.0f;
-
-	//	Matrix Scale(SCALE, *this->pScale);
-	//	Matrix TransA(TRANS, *this->pTrans);
-	//	Matrix RotY(ROT_Y, this->rotY);
-	//	Matrix RotZ(ROT_Z, this->rotZ);
-	//	Matrix RotX(ROT_X, this->rotX);
-	//	// world matrix
-	//	*this->pWorld = Scale * RotX * RotY * RotZ * TransA;
-	//}
-	//else
-	//{
-	//	UNUSED_VAR(currentTime);
-	//	this->rotY += deltaRot;
-	//	//this->rotZ += 0.00025f;
-
-	//	Matrix Scale(SCALE, *this->pScale);
-	//	Matrix TransA(TRANS, *this->pTrans);
-	//	Matrix RotY(ROT_Y, this->rotY);
-	//	Matrix RotZ(ROT_Z, this->rotZ);
-
-	//	// world matrix
-	//	*this->pWorld = Scale * RotY * RotZ * TransA;
-	//}
 }
