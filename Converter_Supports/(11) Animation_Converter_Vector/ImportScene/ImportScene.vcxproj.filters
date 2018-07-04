@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\Common\Common.cxx" />
+    <ClCompile Include="DisplayAnimation.cxx" />
+    <ClCompile Include="DisplayCache.cxx" />
+    <ClCompile Include="DisplayCamera.cxx" />
+    <ClCompile Include="DisplayCommon.cxx" />
+    <ClCompile Include="DisplayGenericInfo.cxx" />
+    <ClCompile Include="DisplayGlobalSettings.cxx" />
+    <ClCompile Include="DisplayHierarchy.cxx" />
+    <ClCompile Include="DisplayLight.cxx" />
+    <ClCompile Include="DisplayLink.cxx" />
+    <ClCompile Include="DisplayMarker.cxx" />
+    <ClCompile Include="DisplayMaterial.cxx" />
+    <ClCompile Include="DisplayMesh.cxx" />
+    <ClCompile Include="DisplayNurb.cxx" />
+    <ClCompile Include="DisplayPatch.cxx" />
+    <ClCompile Include="DisplayPivotsAndLimits.cxx" />
+    <ClCompile Include="DisplayPose.cxx" />
+    <ClCompile Include="DisplayShape.cxx" />
+    <ClCompile Include="DisplaySkeleton.cxx" />
+    <ClCompile Include="DisplayTexture.cxx" />
+    <ClCompile Include="DisplayUserProperties.cxx" />
+    <ClCompile Include="DisplayLodGroup.cxx" />
+    <ClCompile Include="main.cxx" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="Util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Common.h" />
+    <ClInclude Include="DisplayAnimation.h" />
+    <ClInclude Include="DisplayCache.h" />
+    <ClInclude Include="DisplayCamera.h" />
+    <ClInclude Include="DisplayCommon.h" />
+    <ClInclude Include="DisplayGenericInfo.h" />
+    <ClInclude Include="DisplayGlobalSettings.h" />
+    <ClInclude Include="DisplayHierarchy.h" />
+    <ClInclude Include="DisplayLight.h" />
+    <ClInclude Include="DisplayLink.h" />
+    <ClInclude Include="DisplayMarker.h" />
+    <ClInclude Include="DisplayMaterial.h" />
+    <ClInclude Include="DisplayMesh.h" />
+    <ClInclude Include="DisplayNurb.h" />
+    <ClInclude Include="DisplayPatch.h" />
+    <ClInclude Include="DisplayPivotsAndLimits.h" />
+    <ClInclude Include="DisplayPose.h" />
+    <ClInclude Include="DisplayShape.h" />
+    <ClInclude Include="DisplaySkeleton.h" />
+    <ClInclude Include="DisplayTexture.h" />
+    <ClInclude Include="DisplayLodGroup.h" />
+    <ClInclude Include="Structs.h" />
+    <ClInclude Include="File.h" />
+    <ClInclude Include="..\..\FBX_Lib\Align16.h" />
+    <ClInclude Include="..\..\FBX_Lib\Constants.h" />
+    <ClInclude Include="..\..\FBX_Lib\Enum.h" />
+    <ClInclude Include="..\..\FBX_Lib\MathApp.h" />
+    <ClInclude Include="..\..\FBX_Lib\MathEngine.h" />
+    <ClInclude Include="..\..\FBX_Lib\Matrix.h" />
+    <ClInclude Include="..\..\FBX_Lib\Quat.h" />
+    <ClInclude Include="..\..\FBX_Lib\QuatApp.h" />
+    <ClInclude Include="..\..\FBX_Lib\Util.h" />
+    <ClInclude Include="..\..\FBX_Lib\Vect.h" />
+    <ClInclude Include="..\..\FBX_Lib\VectApp.h" />
+    <ClInclude Include="Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="_Lib">
+      <UniqueIdentifier>{273285b1-df33-4eb4-817b-509dfb3f0e9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Lib\Debug">
+      <UniqueIdentifier>{0b633d94-41ac-48cd-8dbd-2ded3c88c7bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Lib\Release">
+      <UniqueIdentifier>{4740c990-742c-4d41-99dc-0cd3a6992ea1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\FBX_Lib\Lib\_Debug\libfbxsdk.lib">
+      <Filter>_Lib\Debug</Filter>
+    </Library>
+    <Library Include="..\..\FBX_Lib\Lib\_Release\libfbxsdk.lib">
+      <Filter>_Lib\Release</Filter>
+    </Library>
+    <Library Include="..\..\FBX_Lib\Lib\_Debug\MathDebug.lib">
+      <Filter>_Lib</Filter>
+    </Library>
+    <Library Include="..\..\FBX_Lib\Lib\_Release\MathRelease.lib">
+      <Filter>_Lib\Release</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
