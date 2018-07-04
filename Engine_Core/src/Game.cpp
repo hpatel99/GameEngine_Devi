@@ -1,8 +1,6 @@
 #include <sb7.h>
 #include"Framework.h"
-#include "GameObject.h"
 #include "Game.h"
-#include "GraphicsObject_SimpleColor.h"
 #include "Texture.h"
 #include "InputManager.H"
 #include"InputTest.h"
@@ -13,7 +11,6 @@
 #include "GraphicsObjectManager.h"
 #include "CameraManager.h"
 #include "ModelImporter.h"
-#include "Timer.h"
 #include "Time.h"
 #include "AnimationManager.h"
 #include "SkeletonManager.h"
@@ -28,7 +25,7 @@
 
 
 //hack
-//extern GameObject *pFirstBone;
+
 
 
 //-----------------------------------------------------------------------------
@@ -171,7 +168,7 @@ void Game::LoadContent()
 
 	
 	//variables to set
-	//TODO find properway to do it
+	
 	
 	
 	GameObjectRigid *pGameObj;
@@ -238,7 +235,7 @@ void Game::LoadContent()
 	//p_skeleton->pRigid->rotate(Rot3AxisType::ROT_XYZ, -1.5708f, 0.0f, 0.00f);
 	SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH_UNCOMPRESSED)->pRigid->setPos(Vect(70.0f, -70.0f, -150.0f));
 	SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH_UNCOMPRESSED)->pRigid->rotate(Rot3AxisType::ROT_XYZ, -1.5708f, 0.0f, 0.00f);
-	//pGameObj->rotate(Rot3AxisType::ROT_XYZ, 1.5708f, 1.5708f, 0.00f);
+	
 }
 
 
