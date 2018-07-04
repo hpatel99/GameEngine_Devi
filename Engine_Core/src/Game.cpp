@@ -119,7 +119,7 @@ void Game::LoadContent()
 	///////////////////////////////////////////////////////////////////////
 
 	SkeletonLoader::Add("humanoid.skel", 0.1f,"BoneInverseHuman.bones", Skeleton::Name::HUMANOID_SKELETON_PUNCH_UNCOMPRESSED);	//one for each animation in display
-	SkeletonLoader::Add("humanoid.skel", 0.1f, "BoneInverseHuman.bones",Skeleton::Name::HUMANOID_SKELETON_SHOT);
+	SkeletonLoader::Add("humanoid.skel", 0.1f, "BoneInverseHuman.bones",Skeleton::Name::HUMANOID_SKELETON_PUNCH_COMPRESSED);
 	//SkeletonLoader::Add("teddy.skel", 10.0f, "BoneInverseteddy.bones", Skeleton::Name::TEDDY_SKELETON_IDLE);
 	//SkeletonLoader::Add("teddy.skel", 10.0f, "BoneInverseteddy.bones", Skeleton::Name::TEDDY_SKELETON_WALK);
 
@@ -134,24 +134,24 @@ void Game::LoadContent()
 	p_animation = new Animation(Skeleton::Name::TEDDY_SKELETON_IDLE, Animation::Name::TEDDY_ANIMATION_IDLE);
 	AnimationManager::Add(p_animation);*/
 
-	Animation *p_animation = new Animation(Skeleton::Name::HUMANOID_SKELETON_PUNCH_UNCOMPRESSED, Animation::Name::HUMANOID_ANIMATION_PUNCH);
+	Animation *p_animation = new Animation(Skeleton::Name::HUMANOID_SKELETON_PUNCH_UNCOMPRESSED, Animation::Name::HUMANOID_ANIMATION_PUNCH_UNCOMPRESSED);
 	AnimationManager::Add(p_animation);
 
-	//p_animation = new Animation(Skeleton::Name::HUMANOID_SKELETON_SHOT, Animation::Name::HUMANOID_ANIMATION_SHOT);
-	//AnimationManager::Add(p_animation);
+	p_animation = new Animation(Skeleton::Name::HUMANOID_SKELETON_PUNCH_COMPRESSED, Animation::Name::HUMANOID_ANIMATION_PUNCH_COMPRESSED);
+	AnimationManager::Add(p_animation);
 
 
 
 	// initialize animation data
 
 	Clip *clip;
-	/*clip= ClipLoader::Add("shot.animo",Clip::Name::HUMANOID_SHOT);
-	p_animation = AnimationManager::Find(Animation::Name::HUMANOID_ANIMATION_SHOT);
+	clip= ClipLoader::Add("Compressedpunch.animo",Clip::Name::HUMANOID_PUNCH_COMPRESSED);
+	p_animation = AnimationManager::Find(Animation::Name::HUMANOID_ANIMATION_PUNCH_COMPRESSED);
 	p_animation->AddClip(clip);
-	p_animation->pActiveClip = clip;*/
+	p_animation->pActiveClip = clip;
 	
-	clip = ClipLoader::Add("punch.animo", Clip::Name::HUMANOID_PUNCH);
-	p_animation = AnimationManager::Find(Animation::Name::HUMANOID_ANIMATION_PUNCH);
+	clip = ClipLoader::Add("Uncompressedpunch.animo", Clip::Name::HUMANOID_PUNCH_UNCOMPRESSED);
+	p_animation = AnimationManager::Find(Animation::Name::HUMANOID_ANIMATION_PUNCH_UNCOMPRESSED);
 	p_animation->AddClip(clip);
 	p_animation->pActiveClip = clip;
 
@@ -206,11 +206,11 @@ void Game::LoadContent()
 	pGraph = new GraphicsObject_ConstColorSkin(ModelManager::Find(Model::TEDDY_SKINNING_MODEL), ShaderObjectManager::Find(ShaderObject::GPU_SKINNIG), SkeletonManager::Find(Skeleton::Name::TEDDY_SKELETON_WALK), AnimationManager::Find(Animation::Name::TEDDY_ANIMATION_WALK), GraphicsObject::Name::SKINNING_TEDDY_WALK);
 	GraphicsObjectManager::Add(pGraph);*/
 
-	GraphicsObject *pGraph = new GraphicsObject_ConstColorSkin(ModelManager::Find(Model::HUMANOID_SKINNING_MODEL), ShaderObjectManager::Find(ShaderObject::GPU_SKINNIG), SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH_UNCOMPRESSED),AnimationManager::Find(Animation::Name::HUMANOID_ANIMATION_PUNCH) ,GraphicsObject::Name::SKINNING_HUMAN_PUNCH);
+	GraphicsObject *pGraph = new GraphicsObject_ConstColorSkin(ModelManager::Find(Model::HUMANOID_SKINNING_MODEL), ShaderObjectManager::Find(ShaderObject::GPU_SKINNIG), SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH_UNCOMPRESSED),AnimationManager::Find(Animation::Name::HUMANOID_ANIMATION_PUNCH_UNCOMPRESSED) ,GraphicsObject::Name::SKINNING_HUMAN_PUNCH_UNCOMPRESSED);
 	GraphicsObjectManager::Add(pGraph);
 
-	//pGraph = new GraphicsObject_ConstColorSkin(ModelManager::Find(Model::HUMANOID_SKINNING_MODEL), ShaderObjectManager::Find(ShaderObject::GPU_SKINNIG), SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_SHOT), AnimationManager::Find(Animation::Name::HUMANOID_ANIMATION_SHOT), GraphicsObject::Name::SKINNING_HUMAN_SHOT);
-	//GraphicsObjectManager::Add(pGraph);
+	pGraph = new GraphicsObject_ConstColorSkin(ModelManager::Find(Model::HUMANOID_SKINNING_MODEL), ShaderObjectManager::Find(ShaderObject::GPU_SKINNIG), SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH_COMPRESSED), AnimationManager::Find(Animation::Name::HUMANOID_ANIMATION_PUNCH_COMPRESSED), GraphicsObject::Name::SKINNING_HUMAN_PUNCH_COMPRESSED);
+	GraphicsObjectManager::Add(pGraph);
 	
 	////////////////////////////////////////////////////////////////////////
 	//          Game   obj Creation and adding to manager			     //
@@ -225,17 +225,17 @@ void Game::LoadContent()
 
 	//pGameObj = new GameObjectRigid(GraphicsObjectManager::Find(GraphicsObject::SKINNING_HUMAN_SHOT));
 	//GameObjectManager::Add(pGameObj, GameObjectManager::GetRoot());
-
-	pGameObj = new GameObjectRigid(GraphicsObjectManager::Find(GraphicsObject::SKINNING_HUMAN_PUNCH));
+	//Adding game object and setting correfct orientation
+	pGameObj = new GameObjectRigid(GraphicsObjectManager::Find(GraphicsObject::SKINNING_HUMAN_PUNCH_UNCOMPRESSED));
 	GameObjectManager::Add(pGameObj, GameObjectManager::GetRoot());
-	//((GraphicsObject_ConstColorSkin*)pGameObj->GetGraphicsObject());
-	//Game object added now will set it to porper orientation
-	
-	//p_skeleton->pRigid->setPos(Vect(10.0f, -30.0f, -70.0f));
-	//p_skeleton->pRigid->rotate(Rot3AxisType::ROT_XYZ, -1.5708f, 0.0f, 0.00f);
 	SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH_UNCOMPRESSED)->pRigid->setPos(Vect(70.0f, -70.0f, -150.0f));
 	SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH_UNCOMPRESSED)->pRigid->rotate(Rot3AxisType::ROT_XYZ, -1.5708f, 0.0f, 0.00f);
 	
+	
+	pGameObj = new GameObjectRigid(GraphicsObjectManager::Find(GraphicsObject::SKINNING_HUMAN_PUNCH_COMPRESSED));
+	GameObjectManager::Add(pGameObj, GameObjectManager::GetRoot());
+	SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH_COMPRESSED)->pRigid->setPos(Vect(-70.0f, -70.0f, -150.0f));
+	SkeletonManager::Find(Skeleton::Name::HUMANOID_SKELETON_PUNCH_COMPRESSED)->pRigid->rotate(Rot3AxisType::ROT_XYZ, -1.5708f, 0.0f, 0.00f);
 }
 
 
