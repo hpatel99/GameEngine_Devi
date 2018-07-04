@@ -6,7 +6,7 @@
 
 //extern Camera *pCam;
 
-GraphicsObject_ConstColorSkin::GraphicsObject_ConstColorSkin(Model * model, ShaderObject * pShaderObj, Skeleton *pSkeleton_, Animation* pinAnim,Name inName)
+GraphicsObject_ConstColorSkin::GraphicsObject_ConstColorSkin(Model * model, ShaderObject * pShaderObj, Skeleton *pSkeleton_, Animation_Player* pinAnim,Name inName)
 	:GraphicsObject(model,pShaderObj,inName)
 {
 	this->p_skeleton = pSkeleton_;

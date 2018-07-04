@@ -1,6 +1,7 @@
 #include "ClipLoader.h"
 #include "File.h"
 #include "Structs.h"
+#include "Time.h"
 
 ClipLoader* ClipLoader::pClipImporter;
 

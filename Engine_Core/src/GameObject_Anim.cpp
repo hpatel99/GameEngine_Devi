@@ -46,7 +46,7 @@ void GameObjectAnim::Update(Time )
 
 	Matrix ParentWorld = *pBoneParent->getWorld();
 
-	// REMEMBER this is for Animation and hierachy, you need to handle models differently
+	// REMEMBER this is for Animation_Player and hierachy, you need to handle models differently
 	// Get the result bone array, from there make the matrix
 	
 	Bone *bResult = Pskeleton->pResult;

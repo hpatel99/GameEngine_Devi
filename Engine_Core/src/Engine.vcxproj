@@ -76,7 +76,7 @@
     </ClCompile>
     <ClCompile Include="Anim.cpp" />
     <ClCompile Include="Anim2Bone.cpp" />
-    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Animation_Player.cpp" />
     <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="BoundingSphere.cpp" />
     <ClCompile Include="Camera.cpp" />
@@ -184,7 +184,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Anim.h" />
-    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Animation_Player.h" />
     <ClInclude Include="AnimationManager.h" />
     <ClInclude Include="BoundingSphere.h" />
     <ClInclude Include="Camera.h" />

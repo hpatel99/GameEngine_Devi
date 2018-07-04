@@ -1,6 +1,6 @@
 #include "AnimationManager.h"
 #include "PCSTreeForwardIterator.h"
-#include "Animation.h"
+#include "Animation_Player.h"
 
 AnimationManager *AnimationManager::pAnimationManager;
 
@@ -30,7 +30,13 @@ void AnimationManager::Create()
 	privCreate();
 }
 
-void AnimationManager::Add(Animation * inode_node)
+void AnimationManager::Destroy()
+{
+	AnimationManager *pMan = AnimationManager::privInstance();
+	delete pMan;
+}
+
+void AnimationManager::Add(Animation_Player * inode_node)
 {
 	AnimationManager *pMan = AnimationManager::privInstance();
 
@@ -52,9 +58,9 @@ void AnimationManager::Add(Animation * inode_node)
 
 }
 
-Animation * AnimationManager::Find(Animation::Name inName_)
+Animation_Player * AnimationManager::Find(Animation_Player::Name inName_)
 {
-	Animation* pConductor = pAnimationManager->pHead;
+	Animation_Player* pConductor = pAnimationManager->pHead;
 	assert(pConductor != nullptr);
 	while (pConductor)
 	{
@@ -73,7 +79,7 @@ void AnimationManager::Update()
 {
 	AnimationManager *pMan = AnimationManager::privInstance();
 	assert(pMan);
-	Animation *pAnim = pMan->pHead;
+	Animation_Player *pAnim = pMan->pHead;
 	while (pAnim != nullptr)
 	{
 		pAnim->Update();
@@ -81,14 +87,14 @@ void AnimationManager::Update()
 
 	}
 
-	//animate here
+	
 }
 
 void AnimationManager::IncreaseSpeed()
 {
 	AnimationManager *pMan = AnimationManager::privInstance();
 	assert(pMan);
-	Animation *pAnim = pMan->pHead;
+	Animation_Player *pAnim = pMan->pHead;
 	while (pAnim != nullptr)
 	{
 		pAnim->increaseSpeed();
@@ -99,5 +105,13 @@ void AnimationManager::IncreaseSpeed()
 
 AnimationManager::~AnimationManager()
 {
-
+	AnimationManager *pMan = AnimationManager::privInstance();
+	assert(pMan);
+	Animation_Player *pAnim = pMan->pHead;
+	while(pAnim != nullptr)
+	{
+		Animation_Player *pToBeDeleted = pAnim;
+		pAnim = pAnim->pNext;
+		delete pToBeDeleted;
+	}
 }
