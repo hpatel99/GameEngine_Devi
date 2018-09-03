@@ -62,7 +62,6 @@ void GameObject::draw()
 	//		p_sphere->setcolor(&incolor);
 	//	}
 	//	//settign sphere to position and drrawing
-
 	//	p_sphere->SetWorld(Result);
 	//	p_sphere->Render();
 	//}

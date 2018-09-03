@@ -14,11 +14,27 @@ struct Bone : public Align16
 
 struct Frame_Bucket
 {
-	Frame_Bucket *nextBucket;
-	Frame_Bucket *prevBucket;
+	
+	
 	Time		  KeyTime;
 	Bone		  *pBone;
+	Frame_Bucket *prevBucket;
+	Frame_Bucket *nextBucket;
 	char		  pad[4];
+
+	Frame_Bucket()				//constructor
+	{
+		this->nextBucket = nullptr;
+		this->prevBucket = nullptr;
+		this->pBone = nullptr;
+		this->KeyTime = Time(Time::ZERO);
+	}
+	~Frame_Bucket()
+	{
+		this->nextBucket = nullptr;
+		this->prevBucket = nullptr;
+		delete[] pBone;
+	}
 };
 
 

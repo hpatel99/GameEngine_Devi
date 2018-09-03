@@ -2,12 +2,12 @@
 #define GRAPHICSOBJECT_CONST_COLOR_SKIN
 #include "GraphicsObject.h"
 #include "Skeleton.h"
-#include "Animation.h"
+#include "Animation_Player.h"
 
 class GraphicsObject_ConstColorSkin :public GraphicsObject
 {
 public:
-	GraphicsObject_ConstColorSkin(Model *model, ShaderObject *pShaderObj ,Skeleton *pSkeleton_ ,Animation* pInAnim ,Name inName);
+	GraphicsObject_ConstColorSkin(Model *model, ShaderObject *pShaderObj ,Skeleton *pSkeleton_ ,Animation_Player* pInAnim ,Name inName);
 	GraphicsObject_ConstColorSkin() = delete;
 	~GraphicsObject_ConstColorSkin();
 
@@ -19,7 +19,7 @@ public:
 
 	// data:  place uniform instancing here
 	Skeleton *p_skeleton;
-	Animation *p_anim;
+	Animation_Player *p_anim;
 
 };
 #endif
