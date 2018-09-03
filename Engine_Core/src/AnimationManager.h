@@ -1,15 +1,17 @@
 #ifndef _ANIMATION_MANAGER
 #define _ANIMATION_MANAGER
 #include "PCSTree.h"
-#include "Animation.h"
+#include "Animation_Player.h"
 
 class AnimationManager
 {
 public:
 
 	static void Create();
-	 static void Add(Animation *inode_node  );
-	 static Animation* Find(Animation::Name inName_);
+	static void Destroy();
+
+	 static void Add(Animation_Player *inode_node  );
+	 static Animation_Player* Find(Animation_Player::Name inName_);
 	static void Update();
 	static void IncreaseSpeed();
 
@@ -19,7 +21,7 @@ private:
 	static AnimationManager *privInstance();
 	static AnimationManager *pAnimationManager;
 	static void privCreate();
-	Animation *pHead;
+	Animation_Player *pHead;
 };
 #endif
 

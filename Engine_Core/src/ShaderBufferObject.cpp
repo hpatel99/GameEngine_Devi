@@ -1,4 +1,5 @@
 #include "ShaderBufferObject.h"
+#include "GL/gl3w.h"
 
 
 ShaderBufferObject::ShaderBufferObject()

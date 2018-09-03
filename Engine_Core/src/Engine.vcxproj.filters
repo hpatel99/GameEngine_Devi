@@ -343,9 +343,6 @@
     <ClCompile Include="GameObjectRigid.cpp">
       <Filter>Source Files\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="Animation.cpp">
-      <Filter>Source Files\Animation</Filter>
-    </ClCompile>
     <ClCompile Include="Skeleton.cpp">
       <Filter>Source Files\Skeleton</Filter>
     </ClCompile>
@@ -369,6 +366,9 @@
     </ClCompile>
     <ClCompile Include="SkinningModel.cpp">
       <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation_Player.cpp">
+      <Filter>Source Files\Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -609,9 +609,6 @@
     <ClInclude Include="GameObjectRigid.h">
       <Filter>Source Files\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Animation.h">
-      <Filter>Source Files\Animation</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\External_Lib\Math\include\Constants.h">
       <Filter>_Libs\MATH\include</Filter>
     </ClInclude>
@@ -671,6 +668,9 @@
     </ClInclude>
     <ClInclude Include="ShaderBufferObject.h">
       <Filter>Source Files\ShaderBufferObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation_Player.h">
+      <Filter>Source Files\Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
