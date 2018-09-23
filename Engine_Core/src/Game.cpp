@@ -289,9 +289,7 @@ void Game::Update(float )
 
 
 	SkeletonManager::Update();				// over here the updat of the QST is send to the bones and not game object.		
-	//SetAnimationPose(pFirstBone, tCurrent);
 	
-
 }
 
 
