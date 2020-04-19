@@ -297,19 +297,19 @@
     <ProjectGuid>{F378881E-1BCC-4A2A-8E59-85BCBC1B6039}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>MathEngineTest</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -352,7 +352,7 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
-      <DisableSpecificWarnings>4514;4668;4710;4711;4201;4588;4587;5039;4596;</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4514;4668;4710;4711;4201;4588;4587;5039;4596;5045</DisableSpecificWarnings>
       <AdditionalIncludeDirectories>$(SolutionDir)Framework;$(SolutionDir)..\External_Lib\GLFW\include;$(SolutionDir)..\External_Lib\SB7\include;$(SolutionDir)..\External_Lib\Math\include;$(SolutionDir)..\External_Lib\File\include;$(SolutionDir)..\External_Lib\PCSTree\include;$(SolutionDir)..\External_Lib\Time\include</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>MemTracker.h</ForcedIncludeFiles>
     </ClCompile>
