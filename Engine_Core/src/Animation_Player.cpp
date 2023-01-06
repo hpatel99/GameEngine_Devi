@@ -311,7 +311,7 @@ void Animation_Player::privProcessCPUanim(Frame_Bucket * pA, Frame_Bucket * pB, 
 
 void Animation_Player::increaseSpeed()
 {
-	this->speed = 0.03f;
+	this->speed += 0.3f;
 }
 
 void Animation_Player::decreaseSpeed()
